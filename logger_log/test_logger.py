@@ -18,11 +18,12 @@ handlers = initialize_logging(
     propagate=True,
 )
 
-# Uses
-logger.debug("Debug message - goes to file only")
-logger.info("Info message - goes to file only")
-logger.warning("Warning message - goes to both file and console")
-logger.error("Error message - goes to both file and console")
+if __name__ == "__main__":
+    logger.debug("This goes to file only")
+    logger.info("This goes to both console and file")
+    logger.error("This goes to both console and file")
+    logger.warning(" This goes to both ")
+    logger.critical("This is a critical system error")
 
-# Calling logs from common module
-common.log_caller()
+    logger.info("Calling code from common")
+    utils.alllow_access()
