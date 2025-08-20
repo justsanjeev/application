@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import logging
 
-from qa_security.log_consumer import common
+from common import utils
 from qiutils.logger.log import initialize_logging
 
 # logger instance
