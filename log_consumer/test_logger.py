@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from qiutils.logger import log_manager
+from qiutils.logger import jenkins_logger
 from common import utils
 
 # Basic usage - gets logger with module name automatically
-logger = log_manager.get_logger(__name__)
+logger = jenkins_logger.get_logger(__name__)
 
 if __name__ == "__main__":
     logger.debug("This goes to file only")
